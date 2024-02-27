@@ -83,6 +83,9 @@ void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int))
 	const binary_tree_t *current = tree;
 	const binary_tree_t *prev = NULL;
 
+	if (tree == NULL || func == NULL)
+		return;
+
 	while (current || stack)
 	{
 		while (current)
